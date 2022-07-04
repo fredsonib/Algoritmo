@@ -1,0 +1,45 @@
+<canvas width="1000" height="1000"></canvas>
+<script>
+        function desenhabarra(x, y, largura, altura, cor){
+            var tela = document.querySelector("canvas");
+            var pincel = tela.getContext("2d");
+
+            pincel.fillStyle = cor;
+            pincel.fillRect(x, y, largura, altura);
+            pincel.strokeStyle = "black";
+            pincel.strokeRect(x, y, largura, altura);
+            
+        }
+
+        function desenhaTexto(x, y, texto){
+            var tela = document.querySelector("canvas");
+            var pincel = tela.getContext("2d");
+
+            pincel.font = "15px Georgia";
+            pincel.fillStyle = "black";
+            pincel.fillText(texto, x, y);
+
+        }
+
+        desenhabarra(50, 50, 50, 50, "blue");
+        desenhabarra(50, 100, 50, 25, "green");
+        desenhabarra(50, 125, 50, 20, "yellow");
+        desenhabarra(50, 145, 50, 5, "red");
+        desenhaTexto ( 50, 30, "2015")
+        desenhaTexto ( 120, 80, "<--- crome")
+        desenhaTexto ( 120, 115, "<---firefox")
+        desenhaTexto ( 120, 135, "<---safari")
+        desenhaTexto ( 120, 150, "<---outros")
+
+        
+        desenhabarra(300, 45, 50, 75, "blue");
+        desenhabarra(300, 120, 50, 20, "green");
+        desenhabarra(300, 140, 50, 15, "yellow");
+        desenhabarra(300, 155, 50, 2, "red");
+        desenhaTexto (300, 30, "2016")
+        desenhaTexto ( 355, 80, "<--- crome")
+        desenhaTexto ( 355, 135, "<---firefox")
+        desenhaTexto ( 355, 150, "<---safari")
+        desenhaTexto ( 355, 160, "<---outros")
+
+</script>
